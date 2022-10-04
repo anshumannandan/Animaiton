@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Poppins&family=Roboto+Mono&display=swap");
+
+body {
+    margin: 0%;
+    font-family: 'Roboto Mono', monospace;
+    overflow: hidden;
+    background-color: #222e48;
+    font-size: x-large;
+    font-weight: bold;
+    color: red;
+}
+
+div {
+    padding: 0 100px;
+    height: 70px;
+    width: 100%;
+}
+
+.tags {
+    display: inline-block;
+    padding: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 35px;
+}
+
+.slider {
+    position: absolute;
+    height: 35px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #c8e7ff;
+    transition: .5s;
+    border-radius: 35px;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .5s;
+    border-radius: 50%;
+}
+
+input:checked+.slider::before {
+    transform: translateX(26px);
+}
+
+.background {
+    height: 85%;
+    width: 90%;
+    border-radius: 30px;
+    margin: 0 5% 5%;
+    border: 5px solid white;
+}
