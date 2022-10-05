@@ -119,3 +119,17 @@ input:checked+.slider::before {
     top: 33%;
     left: 77%;
 }
+
+.car1{
+    position: absolute;
+    top: 90%;
+    height: 8%;
+    width: 12%;
+}
+
+.car2{
+    position: absolute;
+    top: 89.5%;
+    height: 10%;
+    width: 12%;
+}

@@ -120,3 +120,25 @@ setInterval(movecloud1, 50);
 setInterval(movecloud2, 30);
 setInterval(movecloud3, 60);
 setInterval(movecloud4, 40);
+
+let ca1=-250;
+function movecar1(){
+    let car1=document.getElementsByClassName('car1')[0];
+    ca1++;
+    car1.style.marginLeft = ca1 + "px";
+    if (ca1==1750){
+        ca1=-250;
+    }
+}
+let ca2=1550;
+function movecar2(){
+    let car2=document.getElementsByClassName('car2')[0];
+    ca2--;
+    car2.style.left = ca2 + "px";
+    if (ca2==-250){
+        ca2=1550;
+    }
+}
+
+setInterval(movecar1, 10);
+setInterval(movecar2, 9);
