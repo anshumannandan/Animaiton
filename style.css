@@ -10,7 +10,7 @@ body {
     color: red;
 }
 
-div {
+.toggler {
     padding: 0 100px;
     height: 70px;
     width: 100%;
@@ -57,11 +57,14 @@ input:checked+.slider::before {
 }
 
 .background {
-    height: 85%;
-    width: 90%;
+    height: 85vh;
+    width: 90vw;
+    background-image: url("images/day.jpg");
+    background-size: 100% 100%;
     border-radius: 30px;
     margin: 0 5% 5%;
     border: 5px solid white;
+    transition: .5s;
 }
 
 .sun{
@@ -70,4 +73,41 @@ input:checked+.slider::before {
     width: 100px;
     top: 20%;
     left: 35%;
+    z-index: 1;
+    /* transition: 1s; */
+    /* transform: perspective(1000px) translateZ(-1000px); */
+}
+
+.clouds{
+    position: absolute;
+}
+
+.c1{
+    height: 14%;
+    width: 17%;
+    top: 17%;
+    left: 9%;
+    z-index: 2;
+}
+
+.c2{
+    height: 8%;
+    width: 10%;
+    top: 31%;
+    left: 24%;
+}
+
+.c3{
+    height: 15%;
+    width: 20%;
+    top: 16%;
+    left: 63%;
+    z-index: 0;
+}
+
+.c4{
+    height: 11%;
+    width: 16%;
+    top: 33%;
+    left: 77%;
 }
