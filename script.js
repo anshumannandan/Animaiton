@@ -7,7 +7,7 @@ function changetime() {
     let slider = document.getElementsByClassName('slider')[0];
 
     if (document.getElementsByClassName('check')[0].checked) {
-        revolve('sun')
+        revolve('sun', 'n');
         bgclr.style.backgroundColor = "#c8e7ff";
         bgimg.style.backgroundImage = "url('images/night.jpg')";
         slider.style.backgroundColor = "#222e48";
@@ -17,7 +17,7 @@ function changetime() {
         clouds[3].src = "images/nc4.png";
     }
     else {
-        revolve('moon')
+        revolve('moon', 'n');
         bgclr.style.backgroundColor = "#222e48";
         bgimg.style.backgroundImage = "url('images/day.jpg')";
         slider.style.backgroundColor = "#c8e7ff";
@@ -27,45 +27,50 @@ function changetime() {
         clouds[3].src = "images/dc4.png";
     }
 }
-revolve('moon')
+revolve('moon', 'f');
 setInterval(animate, 50);
 let rot = 0;
 function animate() {
-    rot += 1
+    rot += 1;
     sun.style.transform = `rotate(${rot}deg)`;
-    moon.style.transform = `rotate(${rot}deg)`;
 }
 let x = 0;
 let wx = 900;
 let y = 0;
 let wy = 500;
 let change = 0;
-function revolve(body) {
-    clr = setInterval(revolvebody, 10);
+function revolve(body, s) {
+    if (s == 'n') {
+        clr = setInterval(revolvebody, 10);
+    }
+    else {
+        clr = setInterval(revolvebody, 1);
+    }
     function revolvebody() {
         change += 0.01;
         x = 700 + Math.cos(change) * wx;
         y = 600 + Math.sin(change) * wy;
         sun.style.left = x + "px";
         sun.style.top = y + "px";
-        console.log(x, y)
-        if (490 < x && x < 500 && 110 < y && y < 120) {
-            x+=10
-            y+=10
-            clearInterval(clr)
+        if (490 < x && x < 499 && 110 < y && y < 120) {
+            clearInterval(clr);
         }
-        if (1550 < x && x < 1560 && 440 < y && y < 450){
+        else if (1550 < x && x < 1560 && 440 < y && y < 450) {
             if (body == 'moon') {
-                sun.src = "images/sun.png"
+                sun.src = "images/sun.png";
             }
             else {
-                sun.src = "images/moon.png"
+                sun.src = "images/moon.png";
             }
+            clearInterval(clr);
+            revolve(body, 'f');
+        }
+        else if (-190 < x && x < -187 && 510 < y && y < 520) {
+            clearInterval(clr);
+            revolve(body, 'n');
         }
     }
-
 }
-
 
 let cm1 = 0;
 let dr1;
@@ -78,7 +83,7 @@ function movecloud1() {
     else if (cm1 === 0) { dr1 = false; }
 }
 
-let cm2 = 0
+let cm2 = 0;
 let dr2;
 function movecloud2() {
     let cl2 = clouds[1];
@@ -89,7 +94,7 @@ function movecloud2() {
     else if (cm2 === 0) { dr2 = false; }
 }
 
-let cm3 = 0
+let cm3 = 0;
 let dr3;
 function movecloud3() {
     let cl3 = clouds[2];
@@ -100,7 +105,7 @@ function movecloud3() {
     else if (cm3 === 0) { dr3 = false; }
 }
 
-let cm4 = 0
+let cm4 = 0;
 let dr4;
 function movecloud4() {
     let cl4 = clouds[3];

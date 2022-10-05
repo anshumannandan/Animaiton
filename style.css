@@ -67,7 +67,7 @@ input:checked+.slider::before {
     width: 100vw;
     background-image: url("images/day.jpg");
     background-size: 100% 100%;
-    transition: 4s;
+    transition: 5s;
     z-index: 0;
 }
 
