@@ -142,3 +142,15 @@ function movecar2(){
 
 setInterval(movecar1, 10);
 setInterval(movecar2, 9);
+
+let ap=-250;
+function mapl(){
+    let apn=document.getElementsByClassName('aeroplane')[0];
+    ap++;
+    apn.style.marginLeft = ap + "px";
+    if (ap==1750){
+        ap=-250;
+    }
+}
+
+setInterval(mapl, 15);
