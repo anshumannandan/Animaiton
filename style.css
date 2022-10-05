@@ -2,23 +2,29 @@
 
 body {
     margin: 0%;
-    font-family: 'Roboto Mono', monospace;
     overflow: hidden;
     background-color: #222e48;
-    font-size: x-large;
+    font-family: 'Roboto Mono', monospace;
+    font-size: xx-large;
     font-weight: bold;
     color: red;
 }
 
 .toggler {
-    padding: 0 100px;
-    height: 70px;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
 }
 
 .tags {
     display: inline-block;
-    padding: 20px;
+    padding: 50px;
+}
+
+.check {
+    visibility: hidden;
 }
 
 .switch {
@@ -36,7 +42,7 @@ body {
     right: 0;
     bottom: 0;
     background-color: #c8e7ff;
-    transition: .5s;
+    transition: 2s;
     border-radius: 35px;
 }
 
@@ -48,7 +54,7 @@ body {
     left: 4px;
     bottom: 4px;
     background-color: white;
-    transition: .5s;
+    transition: 2s;
     border-radius: 50%;
 }
 
@@ -57,55 +63,52 @@ input:checked+.slider::before {
 }
 
 .background {
-    height: 85vh;
-    width: 90vw;
+    height: 90vh;
+    width: 100vw;
     background-image: url("images/day.jpg");
     background-size: 100% 100%;
-    border-radius: 30px;
-    margin: 0 5% 5%;
-    border: 5px solid white;
-    transition: .5s;
+    transition: 4s;
+    z-index: 0;
 }
 
-.sun{
+.sun,.moon {
     position: absolute;
     height: 100px;
     width: 100px;
-    top: 20%;
-    left: 35%;
-    z-index: 1;
-    /* transition: 1s; */
-    /* transform: perspective(1000px) translateZ(-1000px); */
+    z-index: 2;
+    top:30px;
+    left:30px;
+
 }
 
-.clouds{
+.clouds {
     position: absolute;
 }
 
-.c1{
+.c1 {
     height: 14%;
     width: 17%;
-    top: 17%;
+    top: 13%;
     left: 9%;
-    z-index: 2;
+    z-index: 3;
 }
 
-.c2{
+.c2 {
     height: 8%;
     width: 10%;
     top: 31%;
     left: 24%;
 }
 
-.c3{
+.c3 {
     height: 15%;
     width: 20%;
     top: 16%;
     left: 63%;
-    z-index: 0;
+    z-index: 1;
 }
 
-.c4{
+.c4 {
     height: 11%;
     width: 16%;
     top: 33%;
