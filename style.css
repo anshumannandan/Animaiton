@@ -25,12 +25,12 @@ div {
     position: relative;
     display: inline-block;
     width: 60px;
-    height: 35px;
+    height: 33px;
 }
 
 .slider {
     position: absolute;
-    height: 35px;
+    height: 33px;
     top: 0;
     left: 0;
     right: 0;
@@ -62,4 +62,12 @@ input:checked+.slider::before {
     border-radius: 30px;
     margin: 0 5% 5%;
     border: 5px solid white;
+}
+
+.sun{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 20%;
+    left: 35%;
 }
