@@ -83,34 +83,39 @@ input:checked+.slider::before {
 
 .clouds {
     position: absolute;
+    transition: 3s;
 }
 
 .c1 {
+    background-image: url("images/dc1.png");
     height: 14%;
-    width: 17%;
+    width: 18%;
     top: 13%;
     left: 9%;
     z-index: 3;
 }
 
 .c2 {
+    background-image: url("images/dc2.png");
     height: 8%;
-    width: 10%;
+    width: 12%;
     top: 31%;
     left: 24%;
 }
 
 .c3 {
+    background-image: url("images/dc3.png");
     height: 15%;
-    width: 20%;
+    width: 25%;
     top: 16%;
     left: 63%;
     z-index: 1;
 }
 
 .c4 {
+    background-image: url("images/dc4.png");
     height: 11%;
-    width: 16%;
+    width: 18%;
     top: 33%;
     left: 77%;
 }

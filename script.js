@@ -11,20 +11,20 @@ function changetime() {
         bgclr.style.backgroundColor = "#c8e7ff";
         bgimg.style.backgroundImage = "url('images/night.jpg')";
         slider.style.backgroundColor = "#222e48";
-        clouds[0].src = "images/nc1.png";
-        clouds[1].src = "images/nc2.png";
-        clouds[2].src = "images/nc3.png";
-        clouds[3].src = "images/nc4.png";
+        clouds[0].style.backgroundImage = "url('images/nc1.png')";
+        clouds[1].style.backgroundImage = "url('images/nc2.png')";
+        clouds[2].style.backgroundImage = "url('images/nc3.png')";
+        clouds[3].style.backgroundImage = "url('images/nc4.png')";
     }
     else {
         revolve('moon', 'n');
         bgclr.style.backgroundColor = "#222e48";
         bgimg.style.backgroundImage = "url('images/day.jpg')";
         slider.style.backgroundColor = "#c8e7ff";
-        clouds[0].src = "images/dc1.png";
-        clouds[1].src = "images/dc2.png";
-        clouds[2].src = "images/dc3.png";
-        clouds[3].src = "images/dc4.png";
+        clouds[0].style.backgroundImage = "url('images/dc1.png')";
+        clouds[1].style.backgroundImage = "url('images/dc2.png')";
+        clouds[2].style.backgroundImage = "url('images/dc3.png')";
+        clouds[3].style.backgroundImage = "url('images/dc4.png')";
     }
 }
 revolve('moon', 'f');
